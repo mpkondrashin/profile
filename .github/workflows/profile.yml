@@ -18,7 +18,7 @@ jobs:
       - name: Check Go version
         run: go version
       - name: Profile
-        run: go run cmd/monitor/main.go profile_${{ matrix.os }}.log
+        run: go run main.go profile_${{ matrix.os }}.log
       - uses: actions/upload-artifact@v3
         with:
           name: profile
